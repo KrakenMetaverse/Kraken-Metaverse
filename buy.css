@@ -1,0 +1,125 @@
+/* Google Fonts */
+@import url("https:/fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Lalezar&display=swap');
+
+
+/* Gradient Colors */
+:root {
+    --gradient-1: linear-gradient(to bottom right, rgb(107, 107, 255), blue);
+
+   --gradient-2: linear-gradient(to bottom right, rgb(80, 80, 255), rgb(253, 119, 119)); 
+
+   --gradient-3: linear-gradient(to bottom right, rgb(255, 207, 145), rgb(255, 111, 92));
+
+   --gradient-4: linear-gradient(to bottom right, #2af598, #009efd);
+}
+
+
+
+/* Global */
+* {
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(resources/andrei-caliman-0vUimYhadto-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+/* NAV AND LOGO */
+nav {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 80px;
+    padding: 10px 40px;
+    background: rgba(0,0,0,0.3);
+}
+
+nav img{
+        width: 180px;
+    }
+
+    nav ul {
+        list-style: none;
+        float: right;
+        margin: 0;
+        padding: 0%;
+        display: flex;
+    }
+
+    nav ul li a{
+        line-height: 80px;
+        color: #fff;
+        padding: 12px 30px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    nav ul li a:hover {
+        background: rgba(0,0,0,0.3);
+        border-radius: 6px;
+    }
+
+    nav ul li a.active{
+        background: var(--gradient-2);
+        color: #ffff;
+        border-radius: 6px;
+    }
+
+
+/* COUTNDOWN */
+
+
+    p {
+        text-align: center;
+    }
+
+  .title {
+    margin-top: 20rem;
+    color:#ffff;
+    font-size:5em;
+    word-spacing: 15px;
+    text-shadow: 0px 15px 30px rgba( 0, 0, 0, 1 );
+    margin-bottom: 20px;
+    font-family: 'Lalezar';
+  }
+  .timer {
+    display:flex;
+    justify-content:center;
+  }
+  .date {
+    font-size:5em;
+    font-family: 'Lalezar';
+  }
+  .label {
+    color:#000; 
+  }
+  .pill {
+    background:#769ee9;
+    color:#000;
+    border-top:10px solid #fff;
+    padding:15px 20px;
+    margin:20px 15px;
+    transition: .3s ease-out;
+    border-radius:10px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.5 );
+  }
+  .pill:hover{
+    color:#ffdd40;
+    margin-top: -5px;
+    border-top:5px solid #ffdd40;
+  }
+  .pill:hover .label{
+    color:#ffdd40;
+    transition: .3s;
+  }
+  
