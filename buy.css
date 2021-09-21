@@ -1,6 +1,6 @@
 /* Google Fonts */
 @import url("https:/fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Lalezar&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap");
 
 
 /* Gradient Colors */
@@ -21,64 +21,83 @@
     margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* BODY */
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(resources/andrei-caliman-0vUimYhadto-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
+    min-height: 100vh;
+    background: linear-gradient(#2b1055,#7597de);             
 }
+
+
+body h2 {
+    color: #282f59;
+}
+
+body p {
+    color: #ffffff;
+}
+
+body a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+
 /* NAV AND LOGO */
-nav {
+ header{
     position: absolute;
     top: 0%;
     left: 0%;
     width: 100%;
     height: 80px;
-    padding: 10px 40px;
-    background: rgba(0,0,0,0.3);
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
 }
 
-nav img{
+   header .logo {
         width: 180px;
     }
 
-    nav ul {
-        list-style: none;
-        float: right;
-        margin: 0;
-        padding: 0%;
+
+     header ul {
         display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    nav ul li a{
-        line-height: 80px;
+    header ul li {
+        list-style: none;
+        margin-left: 20px;
+    }
+
+    header ul li a{
+        /* line-height: 80px; */
         color: #fff;
-        padding: 12px 30px;
+        padding: 6px 15px;
         text-decoration: none;
         text-transform: uppercase;
-        font-size: 15px;
-        font-weight: bold;
+        /* font-size: 15px; */
+        /* font-weight: bold; */
+        border-radius: 20px;
     }
 
-    nav ul li a:hover {
-        background: rgba(0,0,0,0.3);
-        border-radius: 6px;
-    }
-
-    nav ul li a.active{
-        background: var(--gradient-2);
-        color: #ffff;
-        border-radius: 6px;
+    header ul li a:hover,
+    header ul li a.active
+    {
+        background: #fff;
+        color: #2b1055;
     }
 
 
 /* COUTNDOWN */
 
-
+    
     p {
         text-align: center;
     }
