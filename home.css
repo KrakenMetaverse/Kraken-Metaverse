@@ -94,6 +94,10 @@ body a {
         color: #2b1055;
     }
 
+    header ul li a:hover {
+        transition-delay: 1ms;
+    }
+
 /* SECTIONS */
 
     section {
@@ -110,14 +114,10 @@ body a {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        pointer-events: none;
     }
 
-    section .image {    
-        
-    }
-
-    section::before
-{
+    section::before {
     content: '';
     position: absolute;
     bottom: 0;
@@ -127,32 +127,15 @@ body a {
     background: linear-gradient(to top, #1c0522, transparent);
     zindex: 1000;
 }
-    .row {
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        z-index: 9;
-        /* align-items: center;
-        padding-top: 5rem; */
-    }
     
-    /* Create two unequal columns that floats next to each other */
-      .left {
-        width: 50%;
-    }
-      .right {
-        width: 50%
+    .header-content {
+        margin-top: 5rem;
+       align-items: center;
+       position: relative;
       }
 
-
-    .header-content, .header-content-2 {
-        padding: 2rem;
-        margin: 0 20px;
-      }
-
-
-      .header-content h1, .header-content-2 h1 {
-        font-size: 5vmin;
+    .header-content h1 {
+        font-size: 3vmin;
         margin-bottom: 30px;
         margin-top: 15rem;
         color:white;
@@ -164,60 +147,74 @@ body a {
         -0.03em -0.03em 0 rgba(0, 0, 0, 1), -0.03em 0.08em 0 rgba(0, 0, 0, 1), -0.03em 0 0 rgba(0, 0, 0, 1);
     }
     
-    .header-content p {
-        margin-bottom: 45px;
-        margin-right: 17px;
-        text-align: center;
-    }
-    .header-content-2 p {
-        margin-left: 45px;
-        margin-bottom: 30px;
-    }
-    
-    .airdrop {
+    #btn {
+        margin-top: 2rem;
+        display: inline-block;
         padding: 10px 20px;
-        border: 1px solid white;
-        border-radius: 50px;
-        color: white;
-        margin-left: 250px;
-        /* margin-left: 180px; */
-    }
-    
-    .airdrop:hover {
-        background: white;
-        border: none;
-        color: #2b1055;
-    }
-    
-     /*---- CTN ----*/
-     .ctn {
-         position: relative;
-        padding: 10px 20px;
-        background: white;
+        background: #fff;
         border-radius: 50px;
         color: #2b1055;
-        left: 270px;
-        top: 60px;
-        
+        transform: translateX(580px);
     }
 
-    .ctn:hover {
+    #btn:hover {
         background: #2b1055;
-        color: white;
+        color: #fff;
+        transition-delay: 0.5ms;
     }
-
-    /* color */
-    /* 
-   Dusty rose: #FFFDD0;
-   peach: #DCAE96;
-    lilac: #C8A2C8;
-    */
     
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+svg {
+    display: block;
+    font-size: 6.5em;
+    width: 960px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+	stroke: #ffffff;
+	animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+	stroke: #ffffff;
+	animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+	stroke: #ffffff;
+	animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+	stroke: #ffffff;
+	animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+	stroke: #ffffff;
+	animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+	100% {stroke-dashoffset: -35%;}
+}
 
       .sec {
           position:relative;
           padding: 100px;
-          background: #1c0522;
+          background: #18051d;
       }
 
       .sec h2 {
